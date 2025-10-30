@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beat the Curve – Learn Anything in 20 % of the Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111827;
+      --accent: #00b7c3;
+      --card: #f9fafb;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+    [data-theme="dark"] {
+      --bg: #111827;
+      --fg: #f9fafb;
+      --card: #1f2937;
+      --shadow: rgba(0, 0, 0, 0.3);
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      position: relative;
+      height: 60vh;
+      background: url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+    .hero {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 1rem;
+    }
+    .hero p {
+      font-size: 1.125rem;
+      margin: 0 0 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--card);
+      box-shadow: 0 2px 8px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      z-index: 10;
+    }
+    .nav-links a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 500;
+    }
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .tag {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.875rem;
+      color: var(--fg);
+      opacity: 0.7;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <h1>Beat the Curve</h1>
+      <p>Learn Anything in 20 % of the Time <em>Everyone Else</em> Needs</p>
+      <a href="#video" class="btn">Watch Free 6-Min Lecture</a>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-links">
+      <a href="#mistake">Mistake Method</a>
+      <a href="#flash">Flash-Cards</a>
+      <a href="#story">Story-Weaving</a>
+    </div>
+    <span class="theme-toggle" onclick="toggleTheme()">🌗</span>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>Why “Learn Fast” Is No Longer a Luxury</h2>
+      <p>Imagine a job interview in 7 days, an entrance test in 10, and your best friend’s wedding in between. The old “read-500-pages-and-hope” formula collapses under real life. Quick-learning isn’t cutting corners—it’s reclaiming <strong>time, energy and confidence</strong>. Try at least one method this week, post your results, and let the next learner benefit. Learning multiplies when shared.</p>
+    </section>
+
+    <section id="mistake">
+      <h2>Story 1 – The Glorious Mistake Method</h2>
+      <div class="card">
+        <span class="tag">Active Guessing</span>
+        <p><strong>Meet Aisha, 27, barista-turned-coder.</strong> Python courses put her to sleep—until she asked AI for 20 tiny scripts, each with exactly ONE bug. She hunted mistakes instead of avoiding them.</p>
+        <pre><code># buggy tax function
+def add_tax(price):
+    return price * 0.15   # logic bug: forgot to ADD it back</code></pre>
+        <p>Every error etched a scar in her brain (the good kind). Four days later she shipped a 50-line stock-tracker; her boss gave her a 30 % raise.</p>
+        <p><strong>Your turn:</strong> pick any skill, grab broken examples, set a 15-min timer, fix five bugs, share the strangest one below.</p>
+      </div>
+    </section>
+
+    <section id="flash">
+      <h2>Story 2 – Flash-Card Duel in the Library</h2>
+      <div class="card">
+        <span class="tag">Retrieval Practice</span>
+        <p><strong>Rahul, med-school student.</strong> 200 drug facts to memorise. Highlighting = yellow novel he couldn’t recall. He built an Anki deck like Pokémon cards:</p>
+        <p><em>Front:</em> “Ace inhibitor that causes dry cough?”<br>
+          <em>Back:</em> “Brady-kinin ↑ → Lisinopril”</p>
+        <p>Two weeks of coffee-line swiping → mock-test: Rahul 94 %, class average 67 %. Retrieval beats re-reading 3×.</p>
+        <p><strong>DIY:</strong> Google Sheets → CSV → Anki/Quizlet → swipe daily → post deck link after you ace the quiz.</p>
+      </div>
+    </section>
+
+    <section id="story">
+      <h2>Story 3 – The Mad Story of Photosynthesis</h2>
+      <div class="card">
+        <span class="tag">Story-Weaving</span>
+        <p><strong>Maya, 14, hated bio chains.</strong> She turned “Photon → PS-II → Electron → PQ → Cytochrome → PS-I → NADPH → Calvin” into a cartoon:</p>
+        <ul>
+          <li>Sunbeam (Photon) kicks Super-Mario (PS-II) → loses electron hat.</li>
+          <li>Mario jumps on green trampoline (PQ) guarded by cyborg chrome-cows (Cytochrome).</li>
+          <li>Cows toss Mario to Princess Peach’s castle (PS-I) → he becomes golden coin (NADPH).</li>
+          <li>Coin buys candy in Calvin Mall → builds glucose towers.</li>
+        </ul>
+        <p>Weird = sticky. Next day she wrote the cycle flawlessly; class asked for more stories.</p>
+        <p><strong>Build yours:</strong> list items, pick familiar heroes, add impossible actions, tell it out loud once → instant glue.</p>
+      </div>
+    </section>
+
+
+    <section id="cta">
+      <h2>Pay It Forward</h2>
+      <p>Knowledge unused evaporates. Pick one method <strong>right now</strong>, learn something tangible in 24 h, and drop your before-and-after story (or flash-card deck, or bug list) in the comments. Future learners will stand on your shoulders.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Beat the Curve Community – happy learning!
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+    }
+  </script>
+</body>
+</html>
